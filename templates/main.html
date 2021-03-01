@@ -1,0 +1,205 @@
+{% extends 'inc/base.html' %}
+{% block content %}
+    
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-sm-3">
+
+            </div>
+
+            <div class="col-sm-6">
+           
+                {% for message in messages %}
+                    <div class="alert alert-success text-center" role="alert">
+                        Employee has been created successfully!
+                    </div>
+                {% endfor %}
+                <div class="card my-4">
+                    <!--tips: add .text-center,.text-right to the .card to change card text alignment-->
+                    <div class="card-body p-4">
+                        <div class="d-flex">
+                            <h4 style="width: 50%;">Add employee</h4>
+                            <div class="text-right" style="width: 50%;">
+                                <a href="employees">
+                                    <button type="button" class="btn btn-info">See all employees</button>
+                                </a>
+                            </div>
+                        </div>
+                        <br>
+                        <form method="POST" action="addEmployee">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>First Name</label>
+                                        <input type="text" class="form-control" name="firstName" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Last Name</label>
+                                        <input type="text" class="form-control" name="lastName" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Monday</label>
+                                        <div class="form-control d-flex">
+                                            <b>From</b>
+                                            <input type="time" class="ml-3 p-0 m-0 border-0" style="width: 100%;" name="monday-from" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="text-white">Last Name</label>
+                                        <div class="form-control d-flex">
+                                            <b>To</b>
+                                            <input type="time" class="ml-3 p-0 m-0 border-0" style="width: 100%;" name="monday-to" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Tuesday</label>
+                                        <div class="form-control d-flex">
+                                            <b>From</b>
+                                            <input type="time" class="ml-3 p-0 m-0 border-0" style="width: 100%;" name="tuesday-from" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="text-white">Tuesday</label>
+                                        <div class="form-control d-flex">
+                                            <b>To</b>
+                                            <input type="time" class="ml-3 p-0 m-0 border-0" style="width: 100%;" name="tuesday-to" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Wednesday</label>
+                                        <div class="form-control d-flex">
+                                            <b>From</b>
+                                            <input type="time" class="ml-3 p-0 m-0 border-0" style="width: 100%;" name="wednesday-from" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="text-white">wednesday</label>
+                                        <div class="form-control d-flex">
+                                            <b>To</b>
+                                            <input type="time" class="ml-3 p-0 m-0 border-0" style="width: 100%;" name="wednesday-to" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Thursday</label>
+                                        <div class="form-control d-flex">
+                                            <b>From</b>
+                                            <input type="time" class="ml-3 p-0 m-0 border-0" style="width: 100%;" name="thursday-from" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="text-white">Thursday</label>
+                                        <div class="form-control d-flex">
+                                            <b>To</b>
+                                            <input type="time" class="ml-3 p-0 m-0 border-0" style="width: 100%;" name="thursday-to" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Friday</label>
+                                        <div class="form-control d-flex">
+                                            <b>From</b>
+                                            <input type="time" class="ml-3 p-0 m-0 border-0" style="width: 100%;" name="friday-from" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="text-white">friday</label>
+                                        <div class="form-control d-flex">
+                                            <b>To</b>
+                                            <input type="time" class="ml-3 p-0 m-0 border-0" style="width: 100%;" name="friday-to" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Saturday</label>
+                                        <div class="form-control d-flex">
+                                            <b>From</b>
+                                            <input type="time" class="ml-3 p-0 m-0 border-0" style="width: 100%;" name="saturday-from" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="text-white">saturday</label>
+                                        <div class="form-control d-flex">
+                                            <b>To</b>
+                                            <input type="time" class="ml-3 p-0 m-0 border-0" style="width: 100%;" name="saturday-to" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Sunday</label>
+                                        <div class="form-control d-flex">
+                                            <b>From</b>
+                                            <input type="time" class="ml-3 p-0 m-0 border-0" style="width: 100%;" name="sunday-from" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="text-white">sunday</label>
+                                        <div class="form-control d-flex">
+                                            <b>To</b>
+                                            <input type="time" class="ml-3 p-0 m-0 border-0" style="width: 100%;" name="sunday-to" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                         
+                        
+                        
+                            <button type="submit" class="btn btn-block btn-info mt-2">Save</button>
+                        </form>
+                    </div>
+                </div>
+               
+            </div>
+
+            <div class="col-sm-3">
+                
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
